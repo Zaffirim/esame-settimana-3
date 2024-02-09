@@ -655,6 +655,14 @@ console.log('******* ESERCIZIO 26******');
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+function addClassToTableRow() {
+  var trElements = document.getElementsByTagName("tr");
+  for (var i = 0; i < trElements.length; i++) {
+    trElements[i].classList.add("test");
+  }
+}
+
+addClassToTableRow();
 
 // [EXTRA] JS Avanzato
 console.log('******* ESERCIZIO 27******');
@@ -669,6 +677,17 @@ console.log('******* ESERCIZIO 27******');
   ***
 
 */
+
+function halfTree(height) {
+  
+  for (var i = 1; i <= height; i++) {
+    
+    console.log('*'.repeat(i));
+  }
+}
+
+halfTree(3);
+
 console.log('******* ESERCIZIO 28******');
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -681,10 +700,37 @@ console.log('******* ESERCIZIO 28******');
   *****
 
 */
+
+function tree(height) {
+  for (var i = 1; i <= height; i++) {
+    console.log(' '.repeat(height - i) + '*'.repeat(2 * i - 1));
+  }
+}
+
+tree(3);
+
 console.log('******* ESERCIZIO 29******');
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+function isItPrime(number) {
+  if (number <= 1) {
+    return false; 
+  }
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+ 
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false; 
+    }
+  }
+
+  return true; 
+}
+
+
+console.log(isItPrime(5));
+console.log(isItPrime(12)); 
+
+
 
