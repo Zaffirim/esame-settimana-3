@@ -524,6 +524,7 @@ function searchByTitle(searchString, movies) {
 console.log( searchByTitle('Lord', movies));
 
 console.log('******* ESERCIZIO 18******');
+
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
@@ -678,10 +679,8 @@ console.log('******* ESERCIZIO 27******');
 
 */
 
-function halfTree(height) {
-  
-  for (var i = 1; i <= height; i++) {
-    
+function halfTree(height) {  
+  for (var i = 1; i <= height; i++) {    
     console.log('*'.repeat(i));
   }
 }
@@ -710,15 +709,15 @@ function tree(height) {
 tree(3);
 
 console.log('******* ESERCIZIO 29******');
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 function isItPrime(number) {
+
   if (number <= 1) {
     return false; 
   }
-
- 
   for (var i = 2; i <= Math.sqrt(number); i++) {
     if (number % i === 0) {
       return false; 
@@ -732,5 +731,5 @@ function isItPrime(number) {
 console.log(isItPrime(5));
 console.log(isItPrime(12)); 
 
-
+// ovviamente, sono sincero, mi sono fatto aiutare da google quando avevo qualche problema;
 
